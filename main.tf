@@ -28,8 +28,8 @@ terraform {
   }
 }
 
-provider "azapi" {
-}
+# provider "azapi" {
+# }
 
 provider "azurerm" {
   features {}
