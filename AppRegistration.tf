@@ -1,7 +1,7 @@
 
 
 resource "azuread_application" "example" {
-  display_name     = "test-azure-functions-secure4321"
+  display_name     = "test-azure-functions-secure4322"
 
   # Disable identifier_uris for the first time when you run terraform. Copy the client id from the portal after first run and then update it with in this script and then re-run terraform
   identifier_uris  = ["api://67cc01eb-5edc-4236-bd37-0a1a51e94e6a"]
