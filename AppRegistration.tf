@@ -66,7 +66,7 @@ resource "azuread_application_password" "example" {
 
 
 
-output "client_secret" {
-  value = azuread_application_password.example.value
-   # Note that you might not want to print this in out in the console all the time
-}
+# output "client_secret" {
+#   value = azuread_application_password.example.value
+#    # Note that you might not want to print this in out in the console all the time
+# }
