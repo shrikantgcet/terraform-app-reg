@@ -4,47 +4,47 @@ resource "azuread_application" "example" {
   display_name     = "test-azure-functions-secure4323"
 
   # Disable identifier_uris for the first time when you run terraform. Copy the client id from the portal after first run and then update it with in this script and then re-run terraform
-  identifier_uris  = ["api://f4b2ad43-4b86-4d23-9601-417a7f3d19b6"]
-  owners           = ["3c32799e-efb5-4e0b-aaa7-717277d7a449"]
+  //identifier_uris  = ["api://f4b2ad43-4b86-4d23-9601-417a7f3d19b6"]
+  owners           = [data.azuread_client_config.current.object_id]
   sign_in_audience = "AzureADMyOrg"
 
-  # api {
-  #   mapped_claims_enabled          = true
-  #   requested_access_token_version = 2
+  api {
+    mapped_claims_enabled          = true
+    requested_access_token_version = 2
 
-  #   oauth2_permission_scope {
-  #     admin_consent_description  = "Allow the application to access example on behalf of the signed-in user."
-  #     admin_consent_display_name = "API Access"
-  #     enabled                    = true
-  #     id                         = "96183846-204b-4b43-82e1-5d2222eb4b9b"
-  #     type                       = "User"
-  #     user_consent_description   = "Allow the application to access example on your behalf."
-  #     user_consent_display_name  = "API Access"
-  #     value                      = "user_impersonation"
-  #   }
+    oauth2_permission_scope {
+      admin_consent_description  = "Allow the application to access example on behalf of the signed-in user."
+      admin_consent_display_name = "API Access"
+      enabled                    = true
+      id                         = "96183846-204b-4b43-82e1-5d2222eb4b9b"
+      type                       = "User"
+      user_consent_description   = "Allow the application to access example on your behalf."
+      user_consent_display_name  = "API Access"
+      value                      = "user_impersonation"
+    }
    
-  # }
+  }
 
-#   feature_tags {
-#     enterprise = true
-#     gallery    = true
-#   }
+  feature_tags {
+    enterprise = true
+    gallery    = true
+  }
 
-#   optional_claims {
+  optional_claims {
 
-#   }
+  }
 
-#   required_resource_access {
-#     resource_app_id = "00000003-0000-0000-c000-000000000000" # Microsoft Graph
+  required_resource_access {
+    resource_app_id = "00000003-0000-0000-c000-000000000000" # Microsoft Graph
 
    
 
-#  resource_access {
-#       id   = "e1fe6dd8-ba31-4d61-89e7-88639da4683d" # User.Read
-#       type = "Scope"
-#     }
+ resource_access {
+      id   = "e1fe6dd8-ba31-4d61-89e7-88639da4683d" # User.Read
+      type = "Scope"
+    }
  
-#   }
+  }
 
 }
 
