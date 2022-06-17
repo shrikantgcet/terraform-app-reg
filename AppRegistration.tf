@@ -4,7 +4,7 @@ resource "azuread_application" "example" {
   display_name     = "test-azure-functions-secure4324"
 
   # Disable identifier_uris for the first time when you run terraform. Copy the client id from the portal after first run and then update it with in this script and then re-run terraform
-  //identifier_uris  = ["api://0e871fe5-aa4e-4d7f-bd14-367b8c6bd59e"]
+  identifier_uris  = ["api://69a12039-1b29-4647-a306-4800db0a4d3d"]
   owners           = [data.azuread_client_config.current.object_id]
   sign_in_audience = "AzureADMyOrg"
 
