@@ -58,11 +58,11 @@ resource "azuread_application" "example" {
 # }
 
 
-# resource "azuread_application_password" "example" {
-#   application_object_id = azuread_application.example.object_id
-#   display_name="Opswat Token"
-#   end_date="2300-01-01T01:02:03Z"
-# }
+resource "azuread_application_password" "example" {
+  application_object_id = azuread_application.example.object_id
+  display_name="Opswat Token"
+  end_date="2300-01-01T01:02:03Z"
+}
 
 
 
