@@ -15,7 +15,7 @@
 terraform {
   required_providers {
     azurerm = {
-      version = "~> 2.79.0"
+      version = "~> 3.5.0"
     }
   }
   backend "remote" {
