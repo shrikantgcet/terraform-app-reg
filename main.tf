@@ -36,13 +36,13 @@ provider "azurerm" {
 }
 
 
-provider "azuread" {
-  alias = "azuread_fmg_aad_group_admin"
+# provider "azuread" {
+#   alias = "azuread_fmg_aad_group_admin"
 
-  tenant_id     = var.aad_tenant_id
-  client_id     = var.aad_client_id
-  client_secret = var.aad_client_secret_id
+#   tenant_id     = var.aad_tenant_id
+#   client_id     = var.aad_client_id
+#   client_secret = var.aad_client_secret_id
 
-}
+# }
 
 data "azuread_client_config" "current" {}
