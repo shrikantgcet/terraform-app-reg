@@ -16,7 +16,7 @@ resource "azuread_application" "example" {
       admin_consent_description  = "Allow the application to access example on behalf of the signed-in user."
       admin_consent_display_name = "API Access"
       enabled                    = true
-      application_id                         = "96183846-204b-4b43-82e1-5d2222eb4b9b"
+      id                         = "96183846-204b-4b43-82e1-5d2222eb4b9b"
       type                       = "User"
       user_consent_description   = "Allow the application to access example on your behalf."
       user_consent_display_name  = "API Access"
@@ -40,7 +40,7 @@ resource "azuread_application" "example" {
    
 
  resource_access {
-      id   = "e1fe6dd8-ba31-4d61-89e7-88639da4683d" # User.Read
+      application_id   = "e1fe6dd8-ba31-4d61-89e7-88639da4683d" # User.Read
       type = "Scope"
     }
  
