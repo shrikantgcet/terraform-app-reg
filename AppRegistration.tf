@@ -40,7 +40,7 @@ resource "azuread_application" "example" {
    
 
  resource_access {
-      application_id   = "e1fe6dd8-ba31-4d61-89e7-88639da4683d" # User.Read
+      id   = "e1fe6dd8-ba31-4d61-89e7-88639da4683d" # User.Read
       type = "Scope"
     }
  
